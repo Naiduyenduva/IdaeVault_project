@@ -58,7 +58,7 @@ ideaRouter.get('/all',userMiddleware, async function(req,res) {
     const ideas = await ideaModel.find({});
 
     res.json({
-        message: "get all the courses",
+        message: "get all the ideas",
         ideas
     })
 })
