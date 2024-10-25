@@ -1,0 +1,17 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    color: white;
+    gap: 2rem;
+    padding: 10px;
+}
+.navborder {
+    background-color: rgb(17, 17, 32);
+        position: sticky;
+        top: 0; /* Stick to the top of the viewport */
+        z-index: 1000; /* Keeps it above other elements */
+    }
+.gapa div{
+    margin-top: 100px;
+}
