@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { Link,useNavigate } from 'react-router-dom';
+
 
 
 function Login(){
@@ -44,22 +45,23 @@ function Login(){
      }
 
     return (
-        <div>
+        <div className="login">
              <form onSubmit={handleSubmit}>
+              <label>Email</label>
              <input 
             type="text" 
-            placeholder="Enter your email" 
             name="email" 
             value={email}
             onChange={handleEmailChange}
           /><br/>
+          <label>Password</label>
            <input 
             type="password" 
-            placeholder="Enter your password" 
             name="password" 
             value={password}
             onChange={handlePasswordChange}
           /><br/>
+          <h3>Don't have an account? <Link to='/signup'>Signup</Link></h3>
           <button type="submit">Login</button>
           </form>
         </div>

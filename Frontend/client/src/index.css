@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    font-family: 'source-serif';
+    padding: 0;
+    font-family: "Jersey 25", serif;
     background-color: rgb(16, 23, 37);
     color: #ffffff;
   }

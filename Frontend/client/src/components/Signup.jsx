@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Signup() {
     // State to manage form data
@@ -38,12 +39,11 @@ function Signup() {
     };
   
     return (
-      <div>
+      <div className="signup">
         <form onSubmit={handleSubmit}>
           <label>Email</label><br/>
           <input 
             type="text" 
-            placeholder="Enter your email" 
             name="email" 
             value={formData.email}
             onChange={handleChange}
@@ -52,7 +52,6 @@ function Signup() {
           <label>Password</label><br/>
           <input 
             type="password" 
-            placeholder="Enter your password" 
             name="password" 
             value={formData.password}
             onChange={handleChange}
@@ -61,7 +60,6 @@ function Signup() {
           <label>First Name</label><br/>
           <input 
             type="text" 
-            placeholder="Enter your first name" 
             name="firstName" 
             value={formData.firstName}
             onChange={handleChange}
@@ -70,12 +68,11 @@ function Signup() {
           <label>Last Name</label><br/>
           <input 
             type="text" 
-            placeholder="Enter your last name" 
             name="lastName" 
             value={formData.lastName}
             onChange={handleChange}
           /><br/>
-  
+        <h3>Already have an account? <Link to='/login'>Login</Link> </h3>
           <button type="submit">Signup</button>
         </form>
       </div>

@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 const Dashboard = () => {
   return (
     <section className='gapa' >
@@ -10,4 +9,4 @@ const Dashboard = () => {
   )
 }
 
-export default Dashboard
+export default Dashboard;
