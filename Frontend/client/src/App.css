@@ -4,7 +4,7 @@
     align-items: baseline;
     color: white;
     gap: 2rem;
-    padding: 10px;
+    padding: 0.5rem 2rem;
 }
 .navborder {
     background-color: rgb(17, 17, 32);
@@ -12,6 +12,28 @@
         top: 0; /* Stick to the top of the viewport */
         z-index: 1000; /* Keeps it above other elements */
     }
-.gapa div{
+.gapa{
     margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.heading1 {
+    font-size: 4rem;
+    margin: 0.5rem;
+}
+.heading2 {
+    font-size: 2rem;
+    width: 50%;
+    text-align: center;
+    color: #D1D5DB;
+}
+.nav-bulb {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.lightbulb {
+    color: #fbbf24;
 }

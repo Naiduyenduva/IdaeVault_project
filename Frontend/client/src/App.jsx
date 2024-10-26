@@ -3,6 +3,7 @@ import Signup from './components/signup'
 import Login from './components/login'
 import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-router-dom';
 import Dashboard from './components/Dashboard'; // Your protected page
+import { Lightbulb } from "lucide-react";
 
 function App() {
 
@@ -11,9 +12,9 @@ function App() {
     <div class>
       <Navbar />
     <Routes>
-          <Route path="/" element={<Signup />} />
+          <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/dashboard" element={<Dashboard />} /> {/* Protected route */}
+          <Route path="/" element={<Dashboard />} /> {/* Protected route */}
     </Routes>
    </div>
    </Router>
@@ -22,7 +23,8 @@ function App() {
 
 function Navbar() {
   return <div className='navbar navborder'>
-    <div>
+    <div className='nav-bulb'>
+      <Lightbulb className='lightbulb' />
     <h1>IdeaVault</h1>
     </div>
     <div className='navbar'>
