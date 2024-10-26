@@ -2,12 +2,13 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    color: white;
+    color: black;
     gap: 2rem;
     padding: 0.5rem 2rem;
 }
 .navborder {
-    background-color: rgb(17, 17, 32);
+    border-bottom: 2px solid red;
+        background-color: rgb(198, 208, 219);
         position: sticky;
         top: 0; /* Stick to the top of the viewport */
         z-index: 1000; /* Keeps it above other elements */
@@ -27,7 +28,7 @@
     font-size: 3rem;
     width: 80%;
     text-align: center;
-    color: #7d75db;
+    color: #000000;
 }
 .nav-bulb {
     display: flex;
@@ -54,7 +55,7 @@ a {
 label {
     font-size: 2rem; /* Increase font size */
     font-weight: bold; /* Make the text bold */
-    color: #fafafa; /* Darker color for contrast */
+    color: #000000; /* Darker color for contrast */
     display: block; /* Ensure it occupies a full line */
 
   }
@@ -69,11 +70,11 @@ input {
 button {
     margin-top: 9px;
     height: 4rem;
-    border: 1px solid white;
+    border: 1px solid black;
     width: 10rem;
-    border-radius: 10px;
-    background-color: transparent;
-    color: white;
+    background-color: rgb(129, 32, 225);
+    border-radius: 20px;
+    color: black;
     font-size: 1.5rem;
     cursor: pointer;
   }

@@ -29,8 +29,8 @@ function Navbar() {
     <h1><Link to='/'>IdeaVault</Link></h1>
     </div>
     <div className='navbar'>
-      <h2><Link to='/signup'>Signup</Link></h2>             
-      <h2><Link to='/login'>Login</Link> </h2>  
+      <button><Link to='/signup'>Signup</Link></button>             
+      <button><Link to='/login'>Login</Link> </button>  
     </div>
   </div>
 }
