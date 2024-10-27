@@ -44,21 +44,25 @@ function Login(){
 
     return (
         <div className="login">
+            <h1 className="l-title">Sign in to your account</h1>
              <form onSubmit={handleSubmit}>
-              <label>Email</label>
+
+              <label>Email address</label><br/>
              <input 
             type="text" 
             name="email" 
             value={email}
             onChange={handleEmailChange}
           /><br/>
-          <label>Password</label>
+
+          <label>Password</label><br/>
            <input 
             type="password" 
             name="password" 
             value={password}
             onChange={handlePasswordChange}
           /><br/>
+
           <h3>Don't have an account? <Link to='/signup'>Signup</Link></h3>
           <button type="submit">Login</button>
           </form>

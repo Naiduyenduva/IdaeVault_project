@@ -40,8 +40,9 @@ function Signup() {
   
     return (
       <div className="signup">
+        <h1 className="s-title">Create your account</h1>
         <form onSubmit={handleSubmit}>
-          <label>Email</label><br/>
+          <label>Email address</label><br/>
           <input 
             type="text" 
             name="email" 
