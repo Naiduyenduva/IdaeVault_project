@@ -1,10 +1,18 @@
 import React from 'react'
+import image from '../assets/image.png'
 
 const Dashboard = () => {
   return (
     <section className='gapa' >
-     <h1 className='heading1'>Share your thoughts with the world</h1>
-     <h1 className='heading2'>A place where innovative ideas are stored, shared, and brought to life. Explore our collection of cutting-edge projects and get inspired!</h1>
+      <div className='container'>
+        <div className='box'>
+          <h1 className='heading1'>A place where ideas <span>shared</span>  and <span>stored</span>  for you</h1>
+          <h2 className='heading2'></h2>
+        </div>
+        <div className='box'>
+        <img src={image} alt="Description" className="image" />
+        </div>
+      </div>
     </section>
   )
 }
