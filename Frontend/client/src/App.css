@@ -114,3 +114,71 @@ button {
     width: 200px;
     margin-right: 210px;
   }
+  .card {
+    width: 400px;
+    height: auto;
+    box-shadow: 0 4px 10px #00000033;
+    border-radius: 12px;
+    padding: 5px 20px 5px 20px;
+  }
+  .pro-title {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  .description {
+    font-size: 20px;
+    font-weight: 100;
+    color: #6B7280;
+  }
+  .techstack {
+    font-size: 24px;
+    font-weight: 550;
+    margin-bottom: 0;
+  }
+  .tech {
+    width: auto;
+    height: 24px;
+    padding: 10px 14px 30px 14px;
+    background-color: #d1d1d3;
+    color: #4B5563;
+    font-size: 18px;
+    font-weight: 700;
+    margin-right: 10px;
+    border: none;
+  }
+.features {
+  font-size: 24px;
+  font-weight: 550;
+}
+.text {
+  font-weight: 400;
+  font-size: 20px;
+  margin-left: 10px;
+  margin-bottom: -5px; /* Adjust the value as needed for spacing */
+}
+.text:last-child {
+  margin-bottom: 10px;
+}
+.card-container {
+  margin: 50px 100px 100px 170px ;
+  display: flex;
+  gap: 90px;
+}
+.footer {
+  width: auto;
+  height: 200px;
+  background-color: #5b5757;
+}
+.items {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+  gap: 90px;
+  color: white;
+  margin-top: 20px;
+}
+.end {
+  text-align: center;
+  color: rgb(228, 205, 76);
+}

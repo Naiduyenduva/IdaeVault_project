@@ -1,6 +1,8 @@
 import React from 'react'
 import image from '../assets/image.png'
 import { Link } from 'react-router-dom'
+import Card from './Card';
+import Footer from './Footer'
 
 const Home = () => {
   return (
@@ -15,6 +17,12 @@ const Home = () => {
         <img src={image} alt="Description" className="image" />
         </div>
       </div>
+        <div className='card-container'>
+          <Card />
+          <Card />
+          <Card />
+        </div>
+        <Footer />
     </section>
   )
 }

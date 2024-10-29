@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes, useNavigate } from 'react-route
 import Home from './components/Home'; // Your protected page
 import { Lightbulb } from "lucide-react";
 import { Link } from 'react-router-dom';
+import Card from './components/Card'
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
     <Routes>
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/Card" element={<Card />} />
           <Route path="/" element={<Home />} /> {/* Protected route */}
     </Routes>
    </div>
