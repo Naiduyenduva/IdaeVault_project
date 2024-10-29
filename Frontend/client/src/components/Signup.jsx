@@ -73,7 +73,7 @@ function Signup() {
             value={formData.lastName}
             onChange={handleChange}
           /><br/>
-        <h3>Already have an account? <Link to='/login'>Login</Link> </h3>
+        <h3>Already have an account? <Link to='/login'><span>Login</span></Link> </h3>
           <button type="submit">Signup</button>
         </form>
       </div>
