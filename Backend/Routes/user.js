@@ -38,7 +38,7 @@ userRouter.post('/login',async function(req,res) {
    if(user && checkedPassword) {
     const token = jwt.sign({
         id: user._id
-    },JWT_SECRET_USER)
+    },JWT_SECRET_USER, {expiresIn: '1h'})
 
         res.json({
             token: token
