@@ -120,6 +120,7 @@ button {
     box-shadow: 0 4px 10px #00000033;
     border-radius: 12px;
     padding: 5px 20px 5px 20px;
+    
   }
   .pro-title {
     font-size: 32px;
@@ -186,4 +187,17 @@ button {
   display: grid;
   place-items: center; /* Centers both horizontally and vertically */
   height: 10vh;
+}
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.whole-card {
+  margin: 90px;
+  display: grid;
+  align-items: baseline;
+  grid-template-columns: repeat(3,500px);
+  justify-content: center;
+  gap: 80px;
 }

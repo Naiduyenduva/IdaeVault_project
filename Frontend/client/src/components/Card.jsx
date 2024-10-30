@@ -1,48 +1,32 @@
 import React from "react";
 
-    const items = [{
-        title: "Project Alpha",
-        description: "A cutting-edge web application showcasing modern development practices.",       
-        techStack: ["React", "Next.js", "Express.js", "Javascript",],
-        features: ["Implementation", "authentication", "Mastering"]
-    },
-    {
-        title: "Mastering datastructures",
-        description: "A cutting-edge web application showcasing modern development practices.",       
-        techStack: ["React", "Flask", "Fast API", "Python"],
-        features: ["Implementation", "authentication","React Native", "Typescript"]
-    },
-    {
-        title: "Built an app for location Finder",
-        description: "A cutting-edge web application showcasing modern development practices.",       
-        techStack: ["React", "Django", "React Native", "Flutter"],
-        features: ["Authentication", "password hashing","Mastering datastructures", "DSA cooker"]
-    }
-    ];
 
-function Card() {
+function Card({ projects }) {
     return(
         <>
+        <div className="whole-card">
         {
-            items.map((item,index)=> (
-            <div className="card" key={index}>
+            projects.map((item,index)=> (
+                <div className="card" key={index}>
                 <h1 className="pro-title">{item.title}</h1>
                 <h2 className="description">{item.description}</h2>
                 <h2 className="techstack">Techstack</h2>
                 {
-                    item.techStack.map((tech,index)=>(
+                    item.techStack.split(',').map((tech,index)=>(
                         <button className="tech" key={index}>{tech}</button>
                     ))
                 }
+                
                 <h2 className="features">Features</h2>
                 {
-                    item.features.map((featuress,index)=>(
+                    item.keyFeatures.split(',').map((featuress,index)=>(
                         <p className="text" key={index}>{featuress}</p>
                     ))
                 }
             </div>
             ))
         }
+        </div>
         </>
     )
 }

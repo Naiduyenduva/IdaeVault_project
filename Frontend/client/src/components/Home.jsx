@@ -17,9 +17,9 @@ const Home = () => {
         <img src={image} alt="Description" className="image" />
         </div>
       </div>
-        <div className='card-container'>
+        {/* <div className='card-container'>
           <Card />
-        </div>
+        </div> */}
         <Footer />
     </section>
   )

@@ -1,7 +1,6 @@
 import { useState } from "react";
 
 function ProjectData() {
-    // State to manage form data
 
     const initialFormData = {
         title: '',

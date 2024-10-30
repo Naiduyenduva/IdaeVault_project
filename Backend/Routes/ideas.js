@@ -22,7 +22,6 @@ ideaRouter.post('/',userMiddleware, async function(req, res) {
         // title: title,
         // techstack,
         // description,
-        keyfeatures
     })
 
 });

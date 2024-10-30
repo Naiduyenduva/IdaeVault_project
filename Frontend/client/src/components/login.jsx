@@ -36,7 +36,7 @@ function Login(){
 
             const data = await response.json();
             localStorage.setItem('token',data.token);
-            navigate('/dashboard');
+            navigate('/myprojects');
            } catch (err) {
             setError(err.message);
           }
