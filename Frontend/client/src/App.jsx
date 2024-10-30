@@ -6,6 +6,7 @@ import Home from './components/Home'; // Your protected page
 import Navbar from './components/Navbar';
 import ProjectData from './components/ProjectData';
 import UserProjects from './components/UserProjects';
+import AllProjects from './components/AllProjects';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path='/projectdata' element={<ProjectData />} />
           <Route path='/myprojects' element={<UserProjects />} />
+          <Route path='/allprojects' element={<AllProjects />} />
     </Routes>
    </div>
    </Router>

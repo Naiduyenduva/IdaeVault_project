@@ -1,17 +1,11 @@
 import { useEffect, useState } from "react";
 import Card from "./Card";
-import ProjectData from "./ProjectData";
 
 
-function UserProjects () {
+function AllProjects () {
     const [data,setData] = useState([]);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
-    const [componentVisible, setComponentVisible] = useState(false);
-
-    function addIdea() {
-        setComponentVisible(true);
-    }
 
 
     useEffect (() => {
@@ -19,7 +13,7 @@ function UserProjects () {
             async function handleData () {
                 try {
                     const token = localStorage.getItem('token');
-                    const response = await fetch('http://localhost:3000/user/ideas', {
+                    const response = await fetch('http://localhost:3000/idea/all', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -53,12 +47,10 @@ function UserProjects () {
     return (
         <div>
         <div className="projects-container">
-        <button  onClick={addIdea} className="add-idea">Add project idea</button>
         <Card projects={data} /> 
             </div>
-        { componentVisible && <ProjectData />}
         </div>
     )
 }
 
-export default UserProjects;
+export default AllProjects;
