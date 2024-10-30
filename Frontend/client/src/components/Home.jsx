@@ -1,8 +1,8 @@
 import React from 'react'
-import image from '../assets/image.png'
-import { Link } from 'react-router-dom'
+import image from '../assets/image.png';
+import { Link } from 'react-router-dom';
 import Card from './Card';
-import Footer from './Footer'
+import Footer from './Footer';
 
 const Home = () => {
   return (
@@ -18,8 +18,6 @@ const Home = () => {
         </div>
       </div>
         <div className='card-container'>
-          <Card />
-          <Card />
           <Card />
         </div>
         <Footer />

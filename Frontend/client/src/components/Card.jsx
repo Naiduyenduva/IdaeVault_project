@@ -1,21 +1,48 @@
+import React from "react";
 
+    const items = [{
+        title: "Project Alpha",
+        description: "A cutting-edge web application showcasing modern development practices.",       
+        techStack: ["React", "Next.js", "Express.js", "Javascript",],
+        features: ["Implementation", "authentication", "Mastering"]
+    },
+    {
+        title: "Mastering datastructures",
+        description: "A cutting-edge web application showcasing modern development practices.",       
+        techStack: ["React", "Flask", "Fast API", "Python"],
+        features: ["Implementation", "authentication","React Native", "Typescript"]
+    },
+    {
+        title: "Built an app for location Finder",
+        description: "A cutting-edge web application showcasing modern development practices.",       
+        techStack: ["React", "Django", "React Native", "Flutter"],
+        features: ["Authentication", "password hashing","Mastering datastructures", "DSA cooker"]
+    }
+    ];
 
 function Card() {
     return(
         <>
-            <div className="card">
-                <h1 className="pro-title">Project Alpha</h1>
-                <h2 className="description">A cutting-edge web application showcasing modern development practices.</h2>
+        {
+            items.map((item,index)=> (
+            <div className="card" key={index}>
+                <h1 className="pro-title">{item.title}</h1>
+                <h2 className="description">{item.description}</h2>
                 <h2 className="techstack">Techstack</h2>
-                <button className="tech">React</button>
-                <button className="tech">Next.js</button>
-                <button className="tech">Typescript</button>
-                <button className="tech">Express.js</button>
+                {
+                    item.techStack.map((tech,index)=>(
+                        <button className="tech" key={index}>{tech}</button>
+                    ))
+                }
                 <h2 className="features">Features</h2>
-                <p className="text">Responsive design</p>
-                <p className="text">Dark mode support</p>
-                <p className="text">API Integration</p>
+                {
+                    item.features.map((featuress,index)=>(
+                        <p className="text" key={index}>{featuress}</p>
+                    ))
+                }
             </div>
+            ))
+        }
         </>
     )
 }

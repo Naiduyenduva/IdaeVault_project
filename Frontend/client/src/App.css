@@ -182,3 +182,8 @@ button {
   text-align: center;
   color: rgb(228, 205, 76);
 }
+.project-data {
+  display: grid;
+  place-items: center; /* Centers both horizontally and vertically */
+  height: 10vh;
+}
