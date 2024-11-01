@@ -15,10 +15,10 @@ app.use(express.json());
 app.use("/user", userRouter);
 app.use("/idea", ideaRouter);
 
-
+const PORT = process.env.PORT || 3000;
 async function main () {
     await mongoose.connect(process.env.MONGO_URL);
-    app.listen(3000);
+    app.listen(PORT);
     console.log("port started");
 }
 

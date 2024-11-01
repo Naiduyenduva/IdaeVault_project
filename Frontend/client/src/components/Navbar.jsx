@@ -11,7 +11,7 @@ function Navbar() {
     useEffect(() => {
       const token = localStorage.getItem('token'); 
       setIsLoggedIn(!!token);
-  }, []);
+  }, [isLoggedIn]);
 
   function logout() {
     localStorage.removeItem('token');
@@ -22,7 +22,7 @@ function Navbar() {
     return ( <div className='navbar navborder'>
       <div className='nav-bulb'>
         <Lightbulb className='lightbulb' />
-      <h1><Link to='/'>IdeaVault</Link></h1>
+      <h1>IdeaVault</h1>
       </div>
       <div className='navbar buttons'>
       {isLoggedIn ? (

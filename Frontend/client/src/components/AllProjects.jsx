@@ -7,9 +7,7 @@ function AllProjects () {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
 
-
     useEffect (() => {
-
             async function handleData () {
                 try {
                     const token = localStorage.getItem('token');
@@ -33,10 +31,10 @@ function AllProjects () {
                 catch (err) {
                     setError(err.message);
                 }finally {
-                    setLoading(false); // Set loading to false after the fetch is done
+                    setLoading(false);
                 }
             }
-            handleData(); // Call the function here
+            handleData();
 
     },[]);
 
