@@ -1,12 +1,12 @@
 .navbar {
     display: flex;
     justify-content: space-between;
-    color: black;
+    color: white;
     gap: 2rem;
     padding: 0.5rem 2rem;
 }
 .navborder {
-    background-color: rgb(216, 214, 214);
+    background-color: rgb(30, 30, 46);
     position: sticky;
     top: 0; /* Stick to the top of the viewport */
     z-index: 1000; /* Keeps it above other elements */    
@@ -40,7 +40,7 @@ a {
 label {
     font-size: 1.2rem; /* Increase font size */
     font-weight: bold; /* Make the text bold */
-    color: #000000; /* Darker color for contrast */
+    color: white; /* Darker color for contrast */
     display: block;
     margin-bottom: -10px;
 }
@@ -58,9 +58,9 @@ button {
     height: 3.5rem;
     border: 1px solid black;
     width: 7rem;
-    background-color: rgb(2, 8, 23);
+    background-color: rgb(255, 255, 255);
     border-radius: 36px;
-    color: white;
+    color: black;
     font-size: 1.5rem;
     cursor: pointer;
   }
@@ -80,7 +80,7 @@ button {
     letter-spacing: -2px;
     padding-right: 110px;
   }
-  .container {
+  .home-container {
     display: flex;
     padding: 100px 50px;
   }
@@ -120,6 +120,8 @@ button {
     box-shadow: 0 4px 20px #00000033;
     border-radius: 12px;
     padding: 5px 20px 5px 20px;
+    background-color: white;
+    color: black;
     
   }
   .pro-title {
@@ -192,6 +194,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   flex: 1;
+  margin-top: 50px;
 }
 .whole-card {
   margin: 0px 110px 110px 110px;

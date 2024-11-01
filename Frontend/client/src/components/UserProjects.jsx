@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Card from "./Card";
 import ProjectData from "./ProjectData";
+import AllProjects from "./AllProjects";
 
 
 function UserProjects () {
@@ -8,11 +9,20 @@ function UserProjects () {
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
     const [componentVisible, setComponentVisible] = useState(false);
+    const [allProjects, setAllProjects] = useState(false);
+    const [myProjects, setMyProjects] = useState(false);
 
     function addIdea() {
-        setComponentVisible(true);
+        setComponentVisible(false);
     }
-
+    function projectsHandler() {
+        setMyProjects(true);
+        setAllProjects(false);
+    }
+    function allProjectsHandler () {
+        setAllProjects(true);
+        setMyProjects(false);
+    }
 
     useEffect (() => {
 
@@ -53,10 +63,14 @@ function UserProjects () {
     return (
         <div>
         <div className="projects-container">
-        <button  onClick={addIdea} className="add-idea">Add project idea</button>
+        <button  onClick={projectsHandler} className="add-idea">My Projects</button>
+        <button  onClick={addIdea} className="add-idea">Add project</button>
+        <button  onClick={allProjectsHandler} className="add-idea">All project ideas</button>
         <Card projects={data} /> 
             </div>
         { componentVisible && <ProjectData />}
+        { allProjects && <AllProjects />}
+        { myProjects && <ProjectData />}
         </div>
     )
 }

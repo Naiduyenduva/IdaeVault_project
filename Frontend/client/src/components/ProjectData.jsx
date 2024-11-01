@@ -45,44 +45,48 @@ function ProjectData() {
     };
   
     return (
-      <div className="project-data">
-        <h1 className="s-title">Post your project idea</h1>
-        <form onSubmit={handleSubmit}>
-          <label>Title</label><br/>
-          <input 
-            type="text" 
-            name="title" 
-            value={formData.title}
-            onChange={handleChange}
-          /><br/>
-
-          <label>description</label><br/>
-          <input 
-            type="text" 
-            name="description" 
-            value={formData.description}
-            onChange={handleChange}
-            /><br/>
-  
-          <label>techstack</label><br/>
-          <input 
-            type="text" 
-            name="techStack" 
-            value={formData.techStack}
-            onChange={handleChange}
-          /><br/>
-  
-  
-            <label>Features</label><br/>
+        <div className="project-data">
+          <h1 className="s-title">Post your project idea</h1>
+          <form onSubmit={handleSubmit}>
+            <label>Title</label><br/>
             <input 
               type="text" 
-              name="keyFeatures" 
-              value={formData.keyFeatures}
+              name="title" 
+              required={true}
+              value={formData.title}
               onChange={handleChange}
-          /><br/>
-          <button type="submit">Add</button>
-        </form>
-      </div>
+            /><br/>
+
+            <label>description</label><br/>
+            <input 
+              type="text" 
+              name="description" 
+              required={true}
+              value={formData.description}
+              onChange={handleChange}
+              /><br/>
+    
+            <label>techstack</label><br/>
+            <input 
+              type="text" 
+              name="techStack" 
+              required={true}
+              value={formData.techStack}
+              onChange={handleChange}
+            /><br/>
+    
+    
+              <label>Features</label><br/>
+              <input 
+                type="text" 
+                name="keyFeatures"
+                required={true} 
+                value={formData.keyFeatures}
+                onChange={handleChange}
+                /><br/>
+            <button type="submit">Add</button>
+          </form>
+        </div>
     );
   }
   

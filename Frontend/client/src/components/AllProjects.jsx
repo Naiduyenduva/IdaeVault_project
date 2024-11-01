@@ -46,8 +46,8 @@ function AllProjects () {
 
     return (
         <div>
-        <div className="projects-container">
-        <Card projects={data} /> 
+            <div className="projects-container">
+               <Card projects={data} /> 
             </div>
         </div>
     )

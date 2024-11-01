@@ -11,7 +11,7 @@ const {ideaModel} = require("../db");
 userRouter.post('/signup', async function(req,res) {
     const { email, password, firstName, lastName } = req.body;
 
-    const hashedPassword = await bcrypt.hash(password,5);
+    const hashedPassword = await bcrypt.hash(password.toLowerCase(),5);
 
     userModel.create({
         email: email,
@@ -33,7 +33,11 @@ userRouter.post('/login',async function(req,res) {
         email: email,
     });      
 
-    const checkedPassword = await bcrypt.compare(password,user.password);
+    if (!user) {
+        return res.status(404).json({ message: "User not found" });
+    }
+
+    const checkedPassword = await bcrypt.compare(password.toLowerCase(),user.password);
     
    if(user && checkedPassword) {
     const token = jwt.sign({
