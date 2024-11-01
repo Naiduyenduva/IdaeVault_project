@@ -10,8 +10,17 @@ function Navbar() {
 
     useEffect(() => {
       const token = localStorage.getItem('token'); 
-      setIsLoggedIn(!!token);
-  }, [isLoggedIn]);
+
+
+      //correct check
+      if(token){ // if there is a token then condition is become true
+        setIsLoggedIn(true)
+      }
+
+      //setIsLoggedIn(!token) // setIsLoggedIn is only accept boolean value but here token is typeof string is not valid 
+      // console.log(setIsLoggedIn(!token));  ---> this is undefined
+
+  }, []);
 
   function logout() {
     localStorage.removeItem('token');

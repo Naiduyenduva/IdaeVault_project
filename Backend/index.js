@@ -17,7 +17,9 @@ app.use("/idea", ideaRouter);
 
 const PORT = process.env.PORT || 3000;
 async function main () {
-    await mongoose.connect(process.env.MONGO_URL);
+    await mongoose.connect(process.env.MONGO_URL,{
+        dbname: "ideavault"
+    });
     app.listen(PORT);
     console.log("port started");
 }
