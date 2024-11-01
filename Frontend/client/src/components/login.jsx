@@ -51,6 +51,7 @@ function Login(){
              <input 
             type="text" 
             name="email" 
+            required={true}
             value={email}
             onChange={handleEmailChange}
           /><br/>
@@ -58,7 +59,8 @@ function Login(){
           <label>Password</label><br/>
            <input 
             type="password" 
-            name="password" 
+            name="password"
+            required={true} 
             value={password}
             onChange={handlePasswordChange}
           /><br/>
@@ -66,7 +68,11 @@ function Login(){
           <h3>Don't have an account? <Link to='/signup'><span>Signup</span></Link></h3>
           <button type="submit">Login</button>
           </form>
+
+          { error && <p className="error">{error}</p>}
         </div>
+
+        
     )
 }
 

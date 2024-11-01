@@ -40,7 +40,7 @@ function AllProjects () {
 
     },[]);
 
-    if (loading) return <p>Loading...</p>;
+    if (loading) return <p className="loading">Loading...</p>;
     if (error) return <p>Error: {error}</p>;
 
 

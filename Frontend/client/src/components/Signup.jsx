@@ -1,14 +1,18 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 
 function Signup() {
     // State to manage form data
-    const [formData, setFormData] = useState({
+    const initialFormData = {
       email: '',
       password: '',
       firstName: '',
       lastName: ''
-    });
+    };
+
+    const [formData, setFormData] = useState(initialFormData);
+    const navigate = useNavigate();
+    const [error, setError] = useState(null);
   
     const handleChange = (e) => {
       setFormData({
@@ -30,11 +34,13 @@ function Signup() {
         if (response.ok) {
           alert('signup successfully')
           console.log("User signed up successfully");
+          setFormData(initialFormData);
         } else {
           console.log("Failed to sign up");
         }
-      } catch (error) {
-        console.error("Error occurred:", error);
+        navigate('/login');
+      } catch (err) {
+        setError(err.message);
       }
     };
   
@@ -46,6 +52,7 @@ function Signup() {
           <input 
             type="text" 
             name="email" 
+            required={true}
             value={formData.email}
             onChange={handleChange}
           /><br/>
@@ -54,6 +61,7 @@ function Signup() {
           <input 
             type="password" 
             name="password" 
+            required={true}
             value={formData.password}
             onChange={handleChange}
           /><br/>
@@ -62,6 +70,7 @@ function Signup() {
           <input 
             type="text" 
             name="firstName" 
+            required={true}
             value={formData.firstName}
             onChange={handleChange}
           /><br/>
@@ -70,12 +79,14 @@ function Signup() {
           <input 
             type="text" 
             name="lastName" 
+            required={true}
             value={formData.lastName}
             onChange={handleChange}
           /><br/>
         <h3>Already have an account? <Link to='/login'><span>Login</span></Link> </h3>
           <button type="submit">Signup</button>
         </form>
+        {error && <p className="error">{error}</p>}
       </div>
     );
   }

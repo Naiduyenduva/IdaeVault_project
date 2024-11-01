@@ -208,3 +208,13 @@ button {
   margin: 50px 150px;
   width: 250px;
 }
+.error {
+  font-size: 44px;
+  color: red;
+  font-style: italic;
+}
+.loading {
+  text-align: center;
+  font-size: 70px;
+  color: red;
+}

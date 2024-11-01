@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import ProjectData from './components/ProjectData';
 import UserProjects from './components/UserProjects';
 import AllProjects from './components/AllProjects';
+import User from './components/user';
 
 function App() {
 
@@ -19,8 +20,9 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Home />} />
           <Route path='/projectdata' element={<ProjectData />} />
-          <Route path='/myprojects' element={<UserProjects />} />
-          <Route path='/allprojects' element={<AllProjects />} />
+          <Route path='/user' element={<User />} />
+          <Route path='/user/myprojects' element={<UserProjects />} />
+          <Route path='/user/allprojects' element={<AllProjects />} />
     </Routes>
    </div>
    </Router>
