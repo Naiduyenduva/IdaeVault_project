@@ -1,8 +1,6 @@
 import React from 'react'
-import image from '../assets/image.png';
+import image from '../assets/Image.png';
 import { Link } from 'react-router-dom';
-import Card from './Card';
-import Footer from './Footer';
 
 const Home = () => {
   return (
