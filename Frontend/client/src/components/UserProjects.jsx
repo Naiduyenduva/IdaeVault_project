@@ -14,7 +14,7 @@ function UserProjects () {
             async function handleData () {
                 try {
                     const token = localStorage.getItem('token');
-                    const response = await fetch('http://localhost:3000/user/ideas', {
+                    const response = await fetch('https://idaevault.onrender.com/user/ideas', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',
@@ -28,7 +28,6 @@ function UserProjects () {
                     
                     const fetchedData = await response.json();
                     setData(fetchedData.ideas);
-                    console.log(fetchedData.ideas);
 
                 }
                 catch (err) {
