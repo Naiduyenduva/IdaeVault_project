@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link,useNavigate } from 'react-router-dom';
 
-function Login(){
+function Login( {setIsLoggedIn} ){
      const [email,setEmail] = useState("");
      const [password,setPassword] = useState("");
      const [error, setError] = useState(null);
@@ -18,7 +18,7 @@ function Login(){
      async function handleSubmit(e) {
         e.preventDefault();
         setError(null);
-
+        
         try {
             const response = await fetch('https://idaevault.onrender.com/user/login', {
               method: 'POST',
@@ -30,9 +30,10 @@ function Login(){
       
             if (response.ok) {
                 alert('login succes')
-            } else {
+                setIsLoggedIn(true);
+              } else {
                 throw new Error('Invalid credentials');
-            }
+              }
 
             const data = await response.json();
             localStorage.setItem('token',data.token);

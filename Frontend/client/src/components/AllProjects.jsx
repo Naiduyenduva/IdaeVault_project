@@ -36,17 +36,25 @@ function AllProjects () {
             handleData();
 
     },[]);
-
-    if (loading) return <p className="loading">Loading...</p>;
     if (error) return <p>Error: {error}</p>;
 
 
     return (
-        <div>
-            <div className="projects-container">
-               <Card projects={data} /> 
-            </div>
-        </div>
+    <div>
+            {
+            loading ? (
+                <div className="loading-spinner">
+                <h2>Loading</h2>
+                <svg viewBox="25 25 50 50">
+                    <circle r="20" cy="50" cx="50"></circle>
+                </svg> 
+                </div>
+                ):(
+                <div className="projects-container">
+                <Card projects={data} /> 
+                </div>
+            )}  
+    </div>
     )
 }
 

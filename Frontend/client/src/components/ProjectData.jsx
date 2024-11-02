@@ -33,7 +33,6 @@ function ProjectData() {
         
         if (response.ok) {
           alert('idea added successfully')
-          console.log("idea added successfully");
           setFormData(initialFormData);
         } else {
           console.log("Failed to add idea");

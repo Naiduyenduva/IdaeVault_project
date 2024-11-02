@@ -1,27 +1,17 @@
 
 import { Link } from 'react-router-dom';
 import { Lightbulb } from "lucide-react";
-import { useState, useEffect } from 'react';
 
+function Navbar({ isLoggedIn, setIsLoggedIn }) {
 
-function Navbar() {
+  
+    function logout() {
+      localStorage.removeItem('token');
+      setIsLoggedIn(false);
+    }
 
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-    useEffect(() => {
-        const token = localStorage.getItem('token'); 
-        setIsLoggedIn(true);
-        console.log("in the login",isLoggedIn);
-  }, []);
-
-  function logout() {
-    localStorage.removeItem('token');
-    setIsLoggedIn(false);
-    console.log("after logout",isLoggedIn);
-  }
-
-
-    return ( <div className='navbar navborder'>
+    return (
+       <div className='navbar navborder'>
       <div className='nav-bulb'>
         <Lightbulb className='lightbulb' />
       <h1>IdeaVault</h1>
