@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link,useNavigate } from 'react-router-dom';
+import Modal from "./Modal";
 
 function Login(  ){
      const [email,setEmail] = useState("");
@@ -42,6 +43,10 @@ function Login(  ){
           }
      }
 
+     function closeModal () {
+      setError(false);
+     }
+
     return (
         <div className="login">
             <h1 className="l-title">Sign in to your account</h1>
@@ -69,8 +74,8 @@ function Login(  ){
           <button type="submit">Login</button>
           </form>
 
-          { error && <p className="error">{error}</p>}
-        </div>
+          {error && <Modal message={error} onClose={closeModal} />}
+          </div>
 
         
     )

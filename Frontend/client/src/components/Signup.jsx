@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link,useNavigate } from "react-router-dom";
+import Modal from "./Modal";
 
 function Signup() {
     // State to manage form data
@@ -44,12 +45,12 @@ function Signup() {
       }
     };
 
-  
+    function closeModal() {
+      setError(false);
+    }
+
     return (
       <>
-      <div className="signup-error">
-         { error && <p className="error">{error}</p>}
-      </div>
       <div className="signup">
         <h1 className="s-title">Create your account</h1>
         <form onSubmit={handleSubmit}>
@@ -92,6 +93,7 @@ function Signup() {
           <button type="submit">Signup</button>
         </form>
       </div>
+        {error && <Modal message={error} onClose={closeModal} />}
       </>
     );
   }
