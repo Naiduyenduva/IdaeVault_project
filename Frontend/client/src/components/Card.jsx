@@ -20,7 +20,10 @@ function Card({ projects }) {
                 <h2 className="features">Features</h2>
                 {
                     item.keyFeatures.split(',').map((featuress,index)=>(
-                        <p className="text" key={index}>{featuress}</p>
+                        <ul>
+                            <li className="text" key={index}>{featuress}</li>
+                        </ul>
+                        // <p className="text" key={index}>{featuress}</p>
                     ))
                 }
             </div>

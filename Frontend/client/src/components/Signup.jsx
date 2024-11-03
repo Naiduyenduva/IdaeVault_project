@@ -23,7 +23,7 @@ function Signup() {
     const handleSubmit = async (e) => {
       e.preventDefault(); 
       try {
-        const response = await fetch('https://idaevault.onrender.com/user/signup', {
+        const response = await fetch('http://localhost:3000/user/signup', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -34,17 +34,22 @@ function Signup() {
         if (response.ok) {
           alert('signup successfully')
           console.log("User signed up successfully");
+          navigate('/login');
           setFormData(initialFormData);
         } else {
-          console.log("Failed to sign up");
+          throw new Error('Email already exists');
         }
-        navigate('/login');
       } catch (err) {
         setError(err.message);
       }
     };
+
   
     return (
+      <>
+      <div className="signup-error">
+         { error && <p className="error">{error}</p>}
+      </div>
       <div className="signup">
         <h1 className="s-title">Create your account</h1>
         <form onSubmit={handleSubmit}>
@@ -64,7 +69,7 @@ function Signup() {
             required={true}
             value={formData.password}
             onChange={handleChange}
-          /><br/>
+            /><br/>
   
           <label>First Name</label><br/>
           <input 
@@ -82,12 +87,12 @@ function Signup() {
             required={true}
             value={formData.lastName}
             onChange={handleChange}
-          /><br/>
+            /><br/>
         <h3>Already have an account? <Link to='/login'><span>Login</span></Link> </h3>
           <button type="submit">Signup</button>
         </form>
-        {error && <p className="error">{error}</p>}
       </div>
+      </>
     );
   }
   
