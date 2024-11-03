@@ -11,6 +11,12 @@ const {ideaModel} = require("../db");
 userRouter.post('/signup', async function(req,res) {
     const { email, password, firstName, lastName } = req.body;
 
+        // Check if the email already exists
+        const existingUser = await userModel.findOne({ email: email });
+        if (existingUser) {
+            return res.status(400).json({ message: "Email is already in use" });
+        }
+        
     const hashedPassword = await bcrypt.hash(password.toLowerCase(),5);
 
     userModel.create({
