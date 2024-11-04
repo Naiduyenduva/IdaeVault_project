@@ -20,7 +20,7 @@ function Navbar() {
     return (
        <div className='navbar navborder'>
       <div className='nav-bulb'>
-      <h2 className='idea-vault'>IdeaVault</h2>
+      <h2 className='idea-vault'><Link to='/'>IdeaVault</Link></h2>
       </div>
       <div className='navbar buttons'>
       {isLoggedIn ? (
