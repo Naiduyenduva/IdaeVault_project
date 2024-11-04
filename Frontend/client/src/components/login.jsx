@@ -76,8 +76,6 @@ function Login(  ){
 
           {error && <Modal message={error} onClose={closeModal} />}
           </div>
-
-        
     )
 }
 

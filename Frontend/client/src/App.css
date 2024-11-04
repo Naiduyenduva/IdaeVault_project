@@ -389,8 +389,7 @@ svg {
     gap: 10px;
   }
   .modal-content {
-    display: grid;
-    height: 20px;
+    height: 40px;
     width: 200px;
   }
   .close {
@@ -399,7 +398,7 @@ svg {
     margin-top: -2px;
   }
   .message {
-    margin-top: -19px;
+    margin-top: 0px;
   }
   .add-buttons {
     display: flex;
