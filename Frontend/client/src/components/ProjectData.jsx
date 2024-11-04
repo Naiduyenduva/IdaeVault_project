@@ -41,7 +41,7 @@ function ProjectData() {
         console.error("Error occurred:", error);
       }
     };
-  
+    
     return (
         <div className="project-data">
           <h1 className="s-title">Post your project idea</h1>

@@ -32,7 +32,7 @@ function User() {
         <div className="add-buttons">
             <button  onClick={projectsHandler} className="add-idea">My Projects</button>
             <button  onClick={addIdea} className="add-idea">Add project</button>
-            <button  onClick={allProjectsHandler} className="add-idea">All project ideas</button>
+            <button  onClick={allProjectsHandler} className="add-idea">All projects</button>
         </div>
         { componentVisible && <ProjectData />}
              { allProjects &&<AllProjects />}

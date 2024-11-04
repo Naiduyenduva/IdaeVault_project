@@ -5,7 +5,7 @@ const Modal = ({ message, onClose }) => {
         <div className="modal-overlay">
             <div className="modal-content">
                 <button className='close' onClick={onClose}>X</button>
-                <p>{message}</p>
+                <p className='message'>{message}</p>
             </div>
         </div>
     );
