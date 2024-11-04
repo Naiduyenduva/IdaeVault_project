@@ -344,13 +344,13 @@ svg {
     margin-top: 40px;
     margin-left: 20px;
     font-size: 24px;
-    width: 99%;
+    width: 90%;
   }
   .heading2 {
-    font-size: 14px;
-    margin-top: -90px;
+    font-size: 16px;
+    margin-top: -80px;
     letter-spacing: 0;
-    margin-left: 60px;
+    margin-left: 70px;
   }
   .image {
     height: 205px;
@@ -358,7 +358,10 @@ svg {
     margin-top: 50px;
   }
   .get {
-    width: 100px;
+    width: 130px;
+    height: 40px;
+    font-size: 16px;
+    margin-top: 5px;
     margin-left: 70px;
   }
   input {
