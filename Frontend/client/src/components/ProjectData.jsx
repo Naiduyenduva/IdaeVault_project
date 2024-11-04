@@ -68,6 +68,7 @@ function ProjectData() {
             <input 
               type="text" 
               name="techStack" 
+              placeholder="separate by commas"
               required={true}
               value={formData.techStack}
               onChange={handleChange}
@@ -78,6 +79,7 @@ function ProjectData() {
               <input 
                 type="text" 
                 name="keyFeatures"
+                placeholder="separate by commas"
                 required={true} 
                 value={formData.keyFeatures}
                 onChange={handleChange}
