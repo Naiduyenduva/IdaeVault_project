@@ -104,7 +104,7 @@ button {
   .heading1 {
     width: 95%;
     height: 150px;
-    margin-top: 130px;
+    margin-top: 20px;
     font-size: 40px;
     margin-bottom: 0;
   }
@@ -316,6 +316,16 @@ svg {
   width: 30px;
 }
 
+.main-tag{
+  font-size: 60px;
+  margin-bottom: 0px;
+  margin-top: 60px;
+  width: 100%;
+  background: linear-gradient(45deg, red, blue);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;} 
+
 @media (max-width: 768px) {
 
   .navbar {
@@ -341,7 +351,7 @@ svg {
   }
   .heading1 {
     margin: 0;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-left: 20px;
     font-size: 24px;
     width: 90%;
@@ -355,7 +365,7 @@ svg {
   .image {
     height: 205px;
     width: 200px;
-    margin-top: 50px;
+    margin-top: 90px;
   }
   .get {
     width: 130px;
@@ -437,6 +447,9 @@ svg {
     margin: 0;
     margin-left: 40px;
     margin-bottom: 30px;
+  }
+  .main-tag {
+    font-size: 36px;
   }
 
 
