@@ -337,6 +337,7 @@ svg {
   .box1 {
     height: 200px;
     padding: 0;
+    margin-top: 80px;
   }
   .heading1 {
     margin: 0;
@@ -349,11 +350,12 @@ svg {
     font-size: 14px;
     margin-top: -90px;
     letter-spacing: 0;
-    margin-left: 60px;
+    margin-left: 120px;
   }
   .image {
     height: 205px;
     width: 200px;
+    margin-top: 50px;
   }
   .get {
     width: 100px;
