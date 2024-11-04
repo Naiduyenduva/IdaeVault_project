@@ -372,11 +372,14 @@ svg {
   .s-title {
     font-size: 1.5rem;
     letter-spacing: 0px;
+    margin-top: 50px;
   }
   .l-title {
     font-size: 1.5rem;
     letter-spacing: -1px;
     margin-left: 20px;
+    margin-top: 50px;
+
   }
   label {
     font-size: 0.7rem;
