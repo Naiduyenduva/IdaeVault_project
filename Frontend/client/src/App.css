@@ -343,14 +343,14 @@ svg {
     margin: 0;
     margin-top: 40px;
     margin-left: 20px;
-    font-size: 20px;
-    width: 90%;
+    font-size: 24px;
+    width: 99%;
   }
   .heading2 {
     font-size: 14px;
     margin-top: -90px;
     letter-spacing: 0;
-    margin-left: 120px;
+    margin-left: 60px;
   }
   .image {
     height: 205px;
