@@ -12,7 +12,7 @@ function Navbar({isLoggedIn, setIsLoggedIn}) {
     return (
        <div className='navbar navborder'>
       <div className='nav-bulb'>
-      <h2 className='idea-vault'><Link to='/'>IdeaVault</Link></h2>
+        <h2 className='idea-vault'><Link to='/'>IdeaVault</Link></h2>
       </div>
       <div className='navbar buttons'>
       {isLoggedIn ? (
