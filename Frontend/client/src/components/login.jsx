@@ -2,12 +2,11 @@ import { useState } from "react";
 import { Link,useNavigate } from 'react-router-dom';
 import Modal from "./Modal";
 
-function Login(  ){
+function Login(){
      const [email,setEmail] = useState("");
      const [password,setPassword] = useState("");
      const [error, setError] = useState(null);
      const navigate = useNavigate();
-
 
      function handleEmailChange (e) {
         setEmail(e.target.value);
@@ -31,6 +30,7 @@ function Login(  ){
       
             if (response.ok) {
                 alert('login succes')
+                // setIsLoggedIn(true);
               } else {
                 throw new Error('Invalid credentials');
               }

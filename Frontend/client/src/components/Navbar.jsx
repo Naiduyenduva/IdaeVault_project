@@ -1,16 +1,8 @@
 
 import { useEffect, useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-function Navbar() {
-
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-    useEffect(()=> {
-      const token = localStorage.getItem('token');
-      setIsLoggedIn(!!token);
-    })
-
+function Navbar({isLoggedIn, setIsLoggedIn}) {
 
     function logout() {
       localStorage.removeItem('token');

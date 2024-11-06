@@ -1,14 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import UserProjects from "./UserProjects";
 import AllProjects from "./AllProjects";
 import ProjectData from "./ProjectData";
 
-function User() {
+function User({setIsLoggedIn}) {
 
     const [allProjects, setAllProjects] = useState(false);
     const [myProjects, setMyProjects] = useState(false);
     const [componentVisible, setComponentVisible] = useState(false);
     const [ projectsDefault, setProjectsDefault ] = useState(true);
+
+    useEffect(()=> {
+        const token = localStorage.getItem('token');
+        setIsLoggedIn(!!token);
+      },[]);  
 
 
     function addIdea() {

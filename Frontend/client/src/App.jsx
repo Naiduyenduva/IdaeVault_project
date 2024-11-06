@@ -15,13 +15,13 @@ function App() {
   return (
      <Router>
     <div>
-      <Navbar />
+      <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
     <Routes>
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<Home />} />
           <Route path='/projectdata' element={<ProjectData />} />
-          <Route path='/user' element={<User />} />
+          <Route path='/user' element={<User setIsLoggedIn={setIsLoggedIn} />} />
     </Routes>
    </div>
    </Router>
