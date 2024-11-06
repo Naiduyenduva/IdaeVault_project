@@ -8,12 +8,14 @@ function User() {
     const [allProjects, setAllProjects] = useState(false);
     const [myProjects, setMyProjects] = useState(false);
     const [componentVisible, setComponentVisible] = useState(false);
+    const [ projectsDefault, setProjectsDefault ] = useState(true);
 
 
     function addIdea() {
         setComponentVisible(true);
         setMyProjects(false);
         setAllProjects(false);
+        setProjectsDefault(false);
     }
 
     function projectsHandler() {
@@ -25,18 +27,22 @@ function User() {
         setAllProjects(true);
         setComponentVisible(false)
         setMyProjects(false);
+        setProjectsDefault(false);
     }
 
     return (
         <>
-        <div className="add-buttons">
-            <button  onClick={projectsHandler} className="add-idea">My Projects</button>
-            <button  onClick={addIdea} className="add-idea">Add project</button>
-            <button  onClick={allProjectsHandler} className="add-idea">All projects</button>
+        <div className="user-bg">
+            <div className="add-buttons">
+                <button  onClick={projectsHandler} className="add-idea">My Projects</button>
+                <button  onClick={addIdea} className="add-idea">Add project</button>
+                <button  onClick={allProjectsHandler} className="add-idea">All projects</button>
+            </div>
+            { projectsDefault && <AllProjects />}
+            { componentVisible && <ProjectData />}
+            { allProjects &&<AllProjects />}
+            { myProjects && <UserProjects />}
         </div>
-        { componentVisible && <ProjectData />}
-             { allProjects &&<AllProjects />}
-             { myProjects && <UserProjects />}
         </>
     )
 }

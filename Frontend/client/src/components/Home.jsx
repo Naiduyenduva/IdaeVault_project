@@ -8,7 +8,7 @@ const Home = () => {
       <div className='home-container'>
         <div className='box box1'>
           <h1 className='main-tag'>Idea. Store. Share.</h1>
-          <h1 className='heading1'>A place where ideas <span>shared</span>  and <span>stored</span>  for you</h1>
+          <h1 className='heading1'>A place where ideas <span>stored</span>  and <span>shared</span>  for you</h1>
           <h2 className='heading2'>Dump and collect project ideas</h2>
           <Link to='/signup'><button className='get'>Get Started</button></Link>
         </div>
