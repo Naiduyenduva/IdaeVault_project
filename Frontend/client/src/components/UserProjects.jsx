@@ -14,7 +14,7 @@ function UserProjects () {
             async function handleData () {
                 try {
                     const token = localStorage.getItem('token');
-                    const response = await fetch('https://idaevault.onrender.com/user/ideas', {
+                    const response = await fetch('https://idae-vault.vercel.app/user/ideas', {
                     method: 'GET',
                     headers: {
                         'Content-Type': 'application/json',

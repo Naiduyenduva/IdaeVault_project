@@ -22,7 +22,7 @@ function ProjectData() {
       e.preventDefault(); 
       try {
         const token = localStorage.getItem('token'); // Adjust if using cookies or other storage
-        const response = await fetch('https://idaevault.onrender.com/idea', {
+        const response = await fetch('https://idae-vault.vercel.app/idea', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

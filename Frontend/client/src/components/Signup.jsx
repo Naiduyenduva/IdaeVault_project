@@ -24,7 +24,7 @@ function Signup() {
     const handleSubmit = async (e) => {
       e.preventDefault(); 
       try {
-        const response = await fetch('https://idaevault.onrender.com/user/signup', {
+        const response = await fetch('https://idae-vault.vercel.app/user/signup', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
